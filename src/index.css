@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-arabic: 'Noto Naskh Arabic', 'Amiri', 'Geeza Pro', 'Traditional Arabic', 'Tahoma', serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8fafc;
+    color: #0f172a;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  line-height: 2.05;
+}
+
+.font-arabic-compact {
+  font-family: var(--font-arabic);
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  line-height: 1.85;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
